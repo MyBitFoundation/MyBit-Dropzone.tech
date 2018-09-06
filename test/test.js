@@ -1,4 +1,4 @@
-const Token = artifacts.require("../../sharedcontracts/ERC20.sol");
+const Token = artifacts.require("../ERC20.sol");
 const Airdrop = artifacts.require("./ERC20Airdrop.sol");
 const MyBitBurner = artifacts.require('./MyBitBurner.sol');
 
