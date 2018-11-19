@@ -31,6 +31,7 @@ contract ERC20Airdrop {
     function sendAirdropEqual(address _tokenAddress, address[] _recipients, uint _amount)
     external
     onlyContracts(_tokenAddress) {
+        require(_recipients.length <= 50);
         require(mybBurner.burn(msg.sender, mybFee));
         ERC20 thisToken = ERC20(_tokenAddress);
         uint totalAmountToSend = _amount.mul(_recipients.length);
@@ -46,6 +47,7 @@ contract ERC20Airdrop {
     function sendAirdrop(address _tokenAddress, address[] _recipients, uint[] _amounts)
     external
     onlyContracts(_tokenAddress) {
+        require(_recipients.length <= 50);
         require(mybBurner.burn(msg.sender, mybFee));
         ERC20 thisToken = ERC20(_tokenAddress);
         uint totalAmountToSend;
