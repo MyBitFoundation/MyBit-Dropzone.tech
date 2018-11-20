@@ -16,7 +16,8 @@ contract ERC20Airdrop {
     using AddressUtils for address;
 
     MyBitBurner public mybBurner;
-    uint mybFee = 250;
+    uint private decimals = 10**18;
+    uint public mybFee = uint(250).mul(decimals);
 
     constructor(address _mybTokenBurner) public{
       mybBurner = MyBitBurner(_mybTokenBurner);
