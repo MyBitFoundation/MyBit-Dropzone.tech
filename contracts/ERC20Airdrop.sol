@@ -41,7 +41,7 @@ contract ERC20Airdrop {
         for (uint i = 0; i < _recipients.length; i++){
             require(thisToken.transferFrom(msg.sender, _recipients[i], _amount));
         }
-        emit LogTokensTransferred(_tokenAddress, msg.sender, totalAmountToSend);
+        emit LogTokensTransferred(_tokenAddress, msg.sender, _recipients, totalAmountToSend);
     }
 
 
@@ -56,7 +56,7 @@ contract ERC20Airdrop {
             require(thisToken.transferFrom(msg.sender, _recipients[i], _amounts[i]));
             totalAmountToSend = totalAmountToSend.add(_amounts[i]);
         }
-        emit LogTokensTransferred(_tokenAddress, msg.sender, totalAmountToSend);
+        emit LogTokensTransferred(_tokenAddress, msg.sender, _recipients, totalAmountToSend);
     }
 
 
@@ -66,5 +66,5 @@ contract ERC20Airdrop {
         _;
     }
 
-    event LogTokensTransferred(address indexed _tokenAddress, address _sender, uint _totalAmount);
+    event LogTokensTransferred(address indexed _tokenAddress, address _sender, address[] _recipients, uint _totalAmount);
 }

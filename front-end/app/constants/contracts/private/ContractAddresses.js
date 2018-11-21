@@ -1,0 +1,3 @@
+export const TOKEN_ADDRESS = '0xd48334d30b60b45458f732984ded7d99b6c49f65';
+export const BURNER_ADDRESS = '0x6ff16d7ebfca1a17f897fc48e5350503fd88a55b';
+export const AIRDROP_ADDRESS = '0x6b3f2e907db696f63405eec10ae2a3bf9907c703';
