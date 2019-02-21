@@ -15,6 +15,7 @@ import P from 'components/P';
 import Button from 'components/Button';
 import Constants from 'components/Constants';
 import ReposList from 'components/ReposList';
+import Disclaimer from 'components/Disclaimer';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
@@ -112,6 +113,7 @@ export class HomePage extends React.PureComponent {
               Contribute
              </Button>
           </StyledCenterButton>
+          <Disclaimer />
       </StyledPage>
     );
   }
