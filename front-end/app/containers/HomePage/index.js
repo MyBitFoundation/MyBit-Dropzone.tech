@@ -9,13 +9,13 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
+import HomePageDisclaimer from '@bit/mybit.ui.home-page-disclaimer';
 
 import H1 from 'components/H1';
 import P from 'components/P';
 import Button from 'components/Button';
 import Constants from 'components/Constants';
 import ReposList from 'components/ReposList';
-import Disclaimer from 'components/Disclaimer';
 import AtPrefix from './AtPrefix';
 import CenteredSection from './CenteredSection';
 import Form from './Form';
@@ -113,7 +113,7 @@ export class HomePage extends React.PureComponent {
               Contribute
              </Button>
           </StyledCenterButton>
-          <Disclaimer />
+          <HomePageDisclaimer />
       </StyledPage>
     );
   }
